@@ -26,12 +26,6 @@
     "components/jqueryui": {
         "version": "1.12.1"
     },
-    "composer/semver": {
-        "version": "1.4.2"
-    },
-    "composer/xdebug-handler": {
-        "version": "1.3.0"
-    },
     "craue/config-bundle": {
         "version": "2.3.0"
     },
@@ -57,13 +51,19 @@
         "version": "v2.8.0"
     },
     "doctrine/doctrine-bundle": {
-        "version": "1.6",
+        "version": "1.12",
         "recipe": {
             "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "1.6",
-            "ref": "ae205d5114e719deb64d2110f56ef910787d1e04"
-        }
+            "branch": "main",
+            "version": "1.12",
+            "ref": "3cc0efdb85531c72c2b25cbb41eec849a279aa64"
+        },
+        "files": [
+            "config/packages/doctrine.yaml",
+            "config/packages/prod/doctrine.yaml",
+            "src/Entity/.gitignore",
+            "src/Repository/.gitignore"
+        ]
     },
     "doctrine/doctrine-cache-bundle": {
         "version": "1.3.3"
@@ -101,15 +101,6 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
-    "easycorp/easy-log-handler": {
-        "version": "1.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "1.0",
-            "ref": "70062abc2cd58794d2a90274502f81b55cd9951b"
-        }
-    },
     "easycorp/easyadmin-bundle": {
         "version": "1.17",
         "recipe": {
@@ -126,13 +117,16 @@
         "version": "1.0.0"
     },
     "friendsofphp/php-cs-fixer": {
-        "version": "2.2",
+        "version": "3.4",
         "recipe": {
             "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "2.2",
-            "ref": "81dee417d2cc60cd1c9d6208dff2ec22a1103e93"
-        }
+            "branch": "main",
+            "version": "3.0",
+            "ref": "be2103eb4a20942e28a6dd87736669b757132435"
+        },
+        "files": [
+            ".php-cs-fixer.dist.php"
+        ]
     },
     "friendsofsymfony/ckeditor-bundle": {
         "version": "2.0",
@@ -248,9 +242,6 @@
     "pagerfanta/pagerfanta": {
         "version": "v2.0.1"
     },
-    "php-cs-fixer/diff": {
-        "version": "v1.3.0"
-    },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
     },
@@ -262,6 +253,20 @@
     },
     "phpoffice/phpspreadsheet": {
         "version": "1.6.0"
+    },
+    "phpunit/phpunit": {
+        "version": "8.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.7",
+            "ref": "b5b34fa22319ac1f7f6c180b30e160841c154a1e"
+        },
+        "files": [
+            ".env.test",
+            "phpunit.xml.dist",
+            "tests/bootstrap.php"
+        ]
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -637,8 +642,5 @@
     },
     "zendframework/zend-code": {
         "version": "3.3.1"
-    },
-    "zendframework/zend-eventmanager": {
-        "version": "3.2.1"
     }
 }
